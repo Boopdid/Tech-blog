@@ -1,0 +1,71 @@
+<div class='row'>
+  <div class='col-auto'>
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class='row mt-4'>
+  <div class='col-md-6'>
+    <h3>Create a New Blog Entry:</h3>
+
+    <form class='form new-project-form'>
+      <div class='form-group'>
+        <label for='project-name'>Blog Title:</label>
+        <input
+          class='form-input form-control'
+          type='text'
+          id='project-name'
+          name='project-name'
+        />
+      </div>
+
+      <div class='form-group'>
+        <label for='project-desc'>Blog body:</label>
+        <textarea
+          class='form-input form-control' rows="6"
+          id='project-desc'
+          name='project-desc'
+        ></textarea>
+      </div>
+      
+        <button type='submit' class='btn btn-primary'>Create</button>
+     
+    </form>
+  </div>
+
+  {{#if blogs.length}}
+    <div class='col-md-6 project-list'>
+      <h3>Previous Entries:</h3>
+
+      {{#each blogs as |blog|}}
+        <div class='container mb-2'>
+          <div class="row">
+           <div class="col">
+
+
+           <a href='/blog/{{blog.id}}'><h4 class="blog-title">{{blog.title}}</h4> </a>
+            
+          <div class="row">
+       
+                   <div class='col-2 edit-button'>
+                        <a href='/edit/{{blog.id}}'>
+                            <button class='btn btn-sm btn-danger' >Edit</button>
+                        </a>
+                    </div>
+
+          <div class='col-2'>
+            <button 
+              class='btn btn-sm btn-danger'
+              data-id='{{blog.id}}'
+            >DELETE</button>
+          </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      {{/each}}
+    
+  {{/if}}
+
+
+<script src='/js/profile.js'></script>

@@ -1,0 +1,26 @@
+<!-- Loop over each object in the projects array -->
+{{#each blogs as |blog|}}
+ <a href='/blog/{{blog.id}}'> <div class='container mb-4 blog'>
+    <div class='col'>
+      <h5 class='blog-title'>
+        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+        {{{get_emoji}}}
+        {{blog.title}}
+
+      </h5>
+      <p class='blog-content'>
+
+
+        {{blog.content}}
+
+      </p>
+      <u><strong>posted by
+        {{blog.user.name}}
+        on
+        {{format_date blog.date_created}} {{blog.updatedAt}}</u></strong>
+    </div>
+    <div class='col-md-7'>
+
+    </div>
+  </div></a>
+{{/each}}
