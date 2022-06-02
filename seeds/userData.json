@@ -1,0 +1,27 @@
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Peter Vrutneski",
+    "email": "pvrutneski@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Johnny Depp",
+    "email": "jdepp@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Boop Did",
+    "email": "boopdid@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Jason Mamoa",
+    "email": "jmamoa@gmail.com",
+    "password": "password12345"
+  }
+]
